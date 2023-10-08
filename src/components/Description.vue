@@ -12,7 +12,7 @@
                     <h4>{{ photo.alt_description }}</h4>
                 </div>
                 <div class="btns-wrapper">
-                    <button @click="addToFavourite(photo)"><img :class="{fav: changeColor}" src="@/img/make-favourite.png"></button>
+                    <button @click="addToFavourite(photo)"><img :class="{favblack: changeColor}" class="fav"  src="@/img/make-favourite.png"></button>
                     <a :href="`data:${photo.urls.full}`" download="image.jpg"><button><img class="download" src="@/img/downloand.png"></button></a>
                     <a :href="`data:${photo.urls.full}`" download><button><img class="download-small" src="@/img/small-download.png"></button></a>
                 </div>
@@ -71,6 +71,7 @@ export default {
     box-shadow: 10px 5px 5px black;;
 }
 
+
 .background {
     background-color: rgb(0, 0, 0, 0.5);
     display: flex;
@@ -85,7 +86,7 @@ export default {
     flex-direction: row;
 }
 
-.fav {
+.favblack {
     filter: invert(1);
 }
 

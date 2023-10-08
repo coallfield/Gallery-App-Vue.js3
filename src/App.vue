@@ -216,6 +216,7 @@ button {
     flex-direction: row !important;
     
   }
+
 }
 
 @media (max-width: 462px) {
