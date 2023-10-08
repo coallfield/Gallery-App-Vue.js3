@@ -12,7 +12,7 @@
                     <h4>{{ photo.alt_description }}</h4>
                 </div>
                 <div class="btns-wrapper">
-                    <button @click="addToFavourite(photo)"><img class="fav" src="@/img/make-favourite.png"></button>
+                    <button @click="addToFavourite(photo)"><img :class="{fav: changeColor}" src="@/img/make-favourite.png"></button>
                     <a :href="`data:${photo.urls.full}`" download="image.jpg"><button><img class="download" src="@/img/downloand.png"></button></a>
                     <a :href="`data:${photo.urls.full}`" download><button><img class="download-small" src="@/img/small-download.png"></button></a>
                 </div>
@@ -26,6 +26,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            changeColor: false
+        }
+    },
     props: {
         photo: {
             type: Object,
@@ -35,7 +40,10 @@ export default {
     methods: {
         addToFavourite(photo) {
             this.$emit('addToFavourite', photo)
-           
+           this.changeColor = true
+           setTimeout(() => {
+                this.changeColor = false
+           }, 200)
         }, 
     }
 
@@ -77,6 +85,9 @@ export default {
     flex-direction: row;
 }
 
+.fav {
+    filter: invert(1);
+}
 
 
 .background-image{
