@@ -80,7 +80,26 @@ export default{
 
 }
 
-@media(max-width: 1340px) {
+
+
+
+.app {
+ overflow-x: hidden;
+}
+
+.hr {
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+}
+
+button {
+  background: none;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 1340px) {
   input.input {
     max-width: 700px;
   }
@@ -97,14 +116,14 @@ export default{
   div.top-btn-wrapper {
     margin-left: -50px;
   }
-  .search-btn[data-v-5a310cbe]{
-    right: 33%;
+  .search-btn{
+    right: 33% !important;
   }
-  div.image-description[data-v-7b5c0861] {
+  div.image-description {
     position: absolute;
     bottom: 105%;
     display: flex;
-    gap: 0px;
+    gap: 0px !important; 
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -117,22 +136,22 @@ export default{
 
 
 @media(max-width: 638px) {
-  .search-btn[data-v-5a310cbe]{
-    right: 35%;
+  .search-btn{
+    right: 35% !important;
   }
-  .description-text[data-v-7b5c0861] {
-    width: 150px;
+  .description-text {
+    width: 150px !important;
   }
-  div.image-description[data-v-7b5c0861] {
-    bottom: 102%;
-    gap: 30px
+  div.image-description {
+    bottom: 102% !important;
+    gap: 30px !important
   }
-  .btns-wrapper[data-v-7b5c0861] {
-    flex-direction: column;
+  .btns-wrapper {
+    flex-direction: column !important;
     
   }
-  .search-favourite-wrapper[data-v-5a310cbe] {
-    flex-direction: column;
+  .search-favourite-wrapper {
+    flex-direction: column !important;
   }
 }
 
@@ -190,16 +209,16 @@ export default{
   .download {
     display: none;
   }
-  .download-small[data-v-7b5c0861]{
-    display: block;
+  .download-small{
+    display: block !important;
   }
-  .btns-wrapper[data-v-7b5c0861] {
-    flex-direction: row;
+  .btns-wrapper {
+    flex-direction: row !important;
     
   }
 }
 
-@media(max-width: 462px) {
+@media (max-width: 462px) {
    input.input {
     margin-left: -17px;
     max-width: 250px;
@@ -213,22 +232,4 @@ export default{
     max-width: 400px;
   }
 }
-
-
-.app {
- overflow-x: hidden;
-}
-
-.hr {
-  width: 100%;
-  height: 10px;
-  background-color: grey;
-}
-
-button {
-  background: none;
-    outline: none;
-    border: none;
-}
-
 </style>
