@@ -232,4 +232,23 @@ button {
     max-width: 400px;
   }
 }
+
+@media (max-width: 360px) {
+  div.gallery-wrapper {
+    max-width: 350px;
+  }
+}
+@media (max-width: 330px) {
+  div.gallery-wrapper {
+    max-width: 300px;
+  }
+  img.image {
+    width: 250px;
+    height: 250px;
+  }
+  input.input {
+    margin-left: -20px;
+    max-width: 200px;
+  }
+}
 </style>
