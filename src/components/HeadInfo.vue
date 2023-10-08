@@ -1,11 +1,13 @@
 <template>
     <div class="header-items">
             <div class="logo-wrap">
-                <img src="@/img/logo.png" class="logo">
+                <img @click="toMain" src="@/img/logo.png" class="logo">
             </div>
             <div class="search-favourite-wrapper">
                 <button @click="toMain" class="search-btn" v-if="showButton || showFavourite"><img src="@/img/search-head.png" class="search"></button>
+                <button @click="toMain" class="small-search" v-if="showButton || showFavourite"><img src="@/img/search-small.png" class="search"></button>
                 <button @click="this.$emit('update:showFavourite', true)" class="favourite-btn"><img src="@/img/favourite.png" class="favourite"></button>
+                <button @click="this.$emit('update:showFavourite', true)" class="favourite-small"><img src="@/img/fav-small.png" class="favourite"></button>
             </div>
         </div>
 </template>
@@ -64,5 +66,18 @@ export default {
     outline: none;
     border: none;
 
+}
+
+.small-search{
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.favourite-small {
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
 }
 </style>

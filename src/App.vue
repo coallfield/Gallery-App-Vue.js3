@@ -52,7 +52,7 @@ export default{
     },
     searchPhotos(photosSearch) {
         this.photos = photosSearch
-        console.log(this.photos)
+        
     }
   },
   mounted() {
@@ -61,7 +61,6 @@ export default{
   },
   computed: {
       findPhotos() {
-        console.log(this.photos)
         return this.photos.filter(el => el.alt_description.toLowerCase().trim().includes(this.findPhoto.toLocaleLowerCase().trim()))
         
       }
@@ -109,12 +108,20 @@ button {
 
 }
 
+@media(max-height: 642px) {
+  div.top-btn-wrapper {
+  margin-top: -20px;
+ 
+  }
+}
+
 @media(max-width: 1194px) {
    input.input {
     max-width:550px;
   }
   div.top-btn-wrapper {
     margin-left: -50px;
+ 
   }
   .search-btn{
     right: 33% !important;
@@ -150,8 +157,17 @@ button {
     flex-direction: column !important;
     
   }
-  .search-favourite-wrapper {
-    flex-direction: column !important;
+  .favourite-btn {
+    display: none;
+  }
+  .favourite-small {
+    display: block !important;
+  }
+  .search-btn {
+    display: none !important;
+  }
+  .small-search {
+    display: block !important;
   }
 }
 

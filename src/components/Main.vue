@@ -82,6 +82,6 @@ export default {
 .top-btn-wrapper {
   position: fixed;
   left: 95%;
-  top: 93%
+  top: 90%
 }
 </style>
